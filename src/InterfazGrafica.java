@@ -165,8 +165,8 @@ public class InterfazGrafica extends JFrame implements ActionListener {
 
             // calcular el IMC y el porcentaje de grasa corporal
             UnidadesMedida unidades = new UnidadesMedida((String) unidadesBox.getSelectedItem());
-            double imc = CalculadoraIMC.calcularIMC(peso, altura, unidades);
-            double porcentajeGrasa = CalculadoraIMC.calcularPorcentajeGrasa(imc, edad, esMujer.isSelected());
+            double imc = Metodos.CalculadoraIMC.calcularIMC(peso, altura, unidades);
+            double porcentajeGrasa = Metodos.CalculadoraIMC.calcularPorcentajeGrasa(imc, edad, esMujer.isSelected());
 
 
             // Mostrar los resultados en la interfaz gráfica

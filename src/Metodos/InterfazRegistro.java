@@ -27,9 +27,12 @@ public class InterfazRegistro {
         System.out.print("Edad: ");
         int edad = scanner.nextInt();
         scanner.nextLine(); // consumir el salto de línea
+        System.out.print("Sexo(M/H): ");
+        char sexo = scanner.nextLine().toUpperCase().charAt(0);
+        scanner.nextLine(); // consumir el salto de línea
 
         // Crea un nuevo usuario y lo añade al registro
-        Persona usuario = new Persona(nombre, apellidos, correoElectronico, contraseña, edad, registrar().getMujer());
+        Persona usuario = new Persona(nombre, apellidos, correoElectronico, contraseña, edad, sexo);
         registro.add(usuario);
 
         // Escribe el registro en un fichero

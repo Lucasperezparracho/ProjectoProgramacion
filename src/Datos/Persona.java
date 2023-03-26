@@ -6,15 +6,15 @@ public class Persona {
     private String correoElectronico;
     private String contrasena;
     private int edad;
-    private boolean mujer;
+    private char sexo;
 
-    public Persona(String nombre, String apellidos, String correoElectronico, String contrasena, int edad, boolean mujer) {
+    public Persona(String nombre, String apellidos, String correoElectronico, String contrasena, int edad, char sexo) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correoElectronico = correoElectronico;
         this.contrasena = contrasena;
         this.edad = edad;
-        this.mujer = mujer;
+        this.sexo = sexo;
     }
 
     public String getNombre() {
@@ -37,7 +37,17 @@ public class Persona {
         return edad;
     }
 
-    public boolean getMujer() {
-        return mujer;
+    public char getSexo() {
+        return sexo;
+    }
+
+    @Override
+    public String toString() {
+        return  "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                ", contrasena='" + contrasena + '\'' +
+                ", edad=" + edad +
+                ", sexo=" + sexo ;
     }
 }
